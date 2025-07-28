@@ -53,7 +53,14 @@ const extraProjects = [
           desc: "An online shopping platform for browsing, purchasing, and managing products with secure checkout.",
           tags: ["HTML", "CSS", "JAVASCRIPT"],
           link: "https://e-commerce-ankitajnotiya.netlify.app/"
-        }
+        },
+        {
+          img: "assets/netflix1.jpg",
+          title: "Netflix Clone",
+          desc: "A video streaming platform replica with user authentication, movie browsing, and playback features.",
+          tags: ["HTML", "CSS", "JAVASCRIPT"],
+          link: "https://netlifxclone-ankitajnotiya.netlify.app/"
+        },
 ];
 
   return (
@@ -122,18 +129,18 @@ const extraProjects = [
 
           <h2>Hi! I Am Ankit Malviya</h2>
           <h2 className="typing-text">
-            <span className="text white">Full Stack </span>
+            <span className="text white">MERN Stack </span>
             <span className="text blue">Developer</span>
           </h2>
           <p className="hero-description">
-            A passionate BTech student specializing in Internet of Things (IoT). With a strong foundation in programming and web development,
+            A passionate B.Tech student specializing in Internet of Things (IoT). With a strong foundation in programming and web development,
             I am dedicated to creating innovative and efficient solutions that cater to modern-day challenges.
           </p>
 
 <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
   <a
     href="/Ankit-Malviya-Upated.pdf"
-    download="Ankit-Malviya-Upated.pdf"
+    download="Ankit Resume .pdf"
     style={{ textDecoration: 'none' }}
   >
     <button
@@ -281,8 +288,15 @@ const extraProjects = [
           img: "assets/zomato.png",
           title: "Zomato Web",
           desc: "A responsive food ordering platform inspired by Zomato, offering dynamic menus, dish selection, real-time order processing, and integrated payment options for a seamless user experience.",
-          tags: ["React","Tailwand Css","Firebase"],
+          tags: ["React","Tailwand CSS","Firebase"],
           link: "https://react-zomato.netlify.app/"
+        },
+        {
+          img: "assets/resturant-management.png",
+          title: "Restaurant Management",
+          desc: "A React-based Restaurant Management Dashboard with user, order, and restaurant controls, charts, and responsive UI.",
+          tags: ["React", "Tailwand CSS"],
+          link: "https://restaurant-management-upadte.netlify.app/"
         },
         {
           img: "assets/aa2.jpg",
@@ -290,13 +304,6 @@ const extraProjects = [
           desc: "A web-based application for interactive online courses and skill development.",
           tags: ["HTML", "CSS", "JAVASCRIPT"],
           link: "https://e-learnig-platform.netlify.app/"
-        },
-        {
-          img: "assets/netflix1.jpg",
-          title: "Netflix Clone",
-          desc: "A video streaming platform replica with user authentication, movie browsing, and playback features.",
-          tags: ["HTML", "CSS", "JAVASCRIPT"],
-          link: "https://netlifxclone-ankitajnotiya.netlify.app/"
         },
         
       ].map((project, idx) => (
