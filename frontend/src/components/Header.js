@@ -28,7 +28,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav className="nav-desktop">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Education">Education</a></li>
             <li><a href="#Skills">Skills</a></li>
@@ -50,7 +50,7 @@ const Header = () => {
               ×
             </div>
             <ul>
-              <li><a href="#" onClick={() => setIsOpen(false)}>Home</a></li>
+              <li><button onClick={() => setIsOpen(false)} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}>Home</button></li>
               <li><a href="#About" onClick={() => setIsOpen(false)}>About</a></li>
               <li><a href="#Education" onClick={() => setIsOpen(false)}>Education</a></li>
               <li><a href="#Skills" onClick={() => setIsOpen(false)}>Skills</a></li>

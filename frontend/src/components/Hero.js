@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Hero = () => {
   const pdfUrl = '/assets/Ankit Resume.pdf';
-  const [showIframe, setShowIframe] = useState(false);
+  const [showIframe] = useState(false);
 
   return (
     <section className="hero">
@@ -63,7 +63,6 @@ const Hero = () => {
                 fontWeight: 'bold',
                 // transition: 'background-color 0.3s ease',
                 height: '40px',
-                color :'#fffff',
               }}
               onMouseEnter={e => e.currentTarget.style.backgroundColor = '#ffff'}
               // onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
