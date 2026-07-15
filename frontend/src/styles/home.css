@@ -337,13 +337,13 @@
   }
   
   .experience-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   
   .experience-item {
-    padding: 25px 20px;
-    margin: 0 15px;
+    padding: 20px 16px;
+    margin: 0 12px;
     min-width: auto;
   }
   
@@ -360,6 +360,7 @@
   
   .experience-description li {
     font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
 
