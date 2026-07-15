@@ -49,7 +49,7 @@ const Hero = () => {
 
         <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
           <a
-            href="/assets/Ankit Resume.pdf"
+            href="/assets/Ankit_Updated_Resume.pdf"
             download="Ankit Resume.pdf"
             style={{ textDecoration: 'none' }}
           >

@@ -227,22 +227,19 @@
 .experience-content {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
 .experience-item {
   background: rgba(26, 34, 51, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid rgba(0, 183, 255, 0.2);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  flex: 1;
-  min-width: 300px;
 }
 
 .experience-item:hover {
@@ -252,21 +249,21 @@
 }
 
 .experience-header {
-  margin-bottom: 25px;
-  padding-bottom: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 183, 255, 0.3);
 }
 
 .experience-role {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 15px;
 }
 
 .experience-role h3 {
   color: var(--accent-color);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin: 0;
 }
@@ -274,25 +271,25 @@
 .experience-type {
   background: linear-gradient(135deg, var(--accent-color), #0066cc);
   color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .experience-details {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .company, .duration {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: var(--gray-color);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .company i, .duration i {

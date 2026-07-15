@@ -80,6 +80,39 @@ const Experience = () => {
               </ul>
             </div>
           </div>
+
+          <div className="experience-item">
+            <div className="experience-header">
+              <div className="experience-role">
+                <h3>Junior Software Engineer</h3>
+                <span className="experience-type">Full-Time</span>
+              </div>
+              <div className="experience-details">
+                <div className="company">
+                  <i className="fas fa-building"></i>
+                  <span>Ahoy Systems Private Limited (Gurugram)</span>
+                </div>
+                <div className="duration">
+                  <i className="fas fa-calendar"></i>
+                  <span>Jun 2026 – Present</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="experience-description">
+              <ul>
+                <li>
+                  Working on software development projects and contributing to team success.
+                </li>
+                <li>
+                  Collaborating with cross-functional teams to deliver high-quality solutions.
+                </li>
+                <li>
+                  Applying best practices in coding and software engineering principles.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
