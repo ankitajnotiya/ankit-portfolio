@@ -1,50 +1,85 @@
 import React from 'react';
 
-const Skills = () => {
-  return (
-    <section className="skills" id="Skills">
-      <div className="container">
-        <h2 className="skills-title">
-          Skills
-          <div className="projectsection-line"></div>
-        </h2>
-        <div className="skills-grid">
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
-            <span>HTML</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
-            <span>CSS</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" />
-            <span>JavaScript</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" />
-            <span>React</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" />
-            <span>MySQL</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" />
-            <span>Next.js</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" />
-            <span>PHP</span>
-          </div>
-          <div className="skill-item">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React Native" />
-            <span>React Native</span>
-          </div>
-        </div>
+const icon = (name, variant = 'original') =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/${name}/${name}-${variant}.svg`;
+
+const GROUPS = [
+  {
+    title: 'Frontend',
+    note: 'Interfaces & state',
+    wide: true,
+    items: [
+      { name: 'HTML', src: icon('html5') },
+      { name: 'CSS', src: icon('css3') },
+      { name: 'JavaScript', src: icon('javascript') },
+      { name: 'React', src: icon('react') },
+      { name: 'Next.js', src: icon('nextjs'), invert: true },
+      { name: 'Tailwind CSS', src: icon('tailwindcss') },
+      { name: 'Redux Toolkit', src: icon('redux') },
+    ],
+  },
+  {
+    title: 'Backend & Database',
+    note: 'APIs & data',
+    items: [
+      { name: 'PHP', src: icon('php') },
+      { name: 'Laravel', src: icon('laravel') },
+      { name: 'MySQL', src: icon('mysql') },
+    ],
+  },
+  {
+    title: 'Mobile',
+    note: 'Android & iOS',
+    items: [{ name: 'React Native', src: icon('react') }],
+  },
+  {
+    title: 'Workflow',
+    note: 'Version control & hosting',
+    wide: true,
+    items: [
+      { name: 'Git', src: icon('git') },
+      { name: 'GitHub', src: icon('github'), invert: true },
+      { name: 'Netlify', src: icon('netlify') },
+    ],
+  },
+];
+
+const Skills = () => (
+  <section className="skills" id="Skills">
+    <div className="skills-inner">
+      <header className="skills-head">
+        <h2 className="skills-title">Skills</h2>
+      </header>
+
+      <div className="skills-board">
+        {GROUPS.map((group, i) => (
+          <article
+            key={group.title}
+            className={`skills-panel${group.wide ? ' skills-panel--wide' : ''}`}
+            style={{ '--i': i }}
+          >
+            <div className="skills-panel-head">
+              <h3>{group.title}</h3>
+              <span>{group.note}</span>
+            </div>
+            <ul className="skills-list">
+              {group.items.map((skill) => (
+                <li className="skills-chip" key={skill.name}>
+                  <img
+                    src={skill.src}
+                    alt=""
+                    loading="lazy"
+                    className={skill.invert ? 'is-invert' : undefined}
+                  />
+                  <span>{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Skills;

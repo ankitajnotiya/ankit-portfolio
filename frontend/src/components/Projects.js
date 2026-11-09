@@ -10,6 +10,13 @@ const Projects = () => {
 
   const extraProjects = [
     {
+      img: "assets/resturant-management.png",
+      title: "Restaurant Management",
+      desc: "A React-based Restaurant Management Dashboard with user, order, and restaurant controls, charts, and responsive UI.",
+      tags: ["React", "Tailwand CSS"],
+      link: "https://restaurant-management-upadte.netlify.app/"
+    },
+    {
       img: "assets/e-learning-platform.jpg",
       title: "E-Learning Platform",
       desc: "A simple E-Learning Platform built using HTML, CSS, and JavaScript that allows users to browse courses like HTML, CSS, and JavaScript, watch video lectures, and continue learning with basic progress tracking.",
@@ -52,6 +59,14 @@ const Projects = () => {
           {/* First 3 default visible */}
           {[
             {
+              img: "assets/jobpilot-ai.svg",
+              video: "assets/JobPilot_Ai.mp4",
+              title: "JobPilot AI",
+              desc: "A full-stack job tracking platform designed to manage automated job applications, ATS scores, and recruiter analytics in one place. Features a flexible Demo Mode architecture for seamless switching between live PHP APIs and mock data.",
+              tags: ["Next.js", "React.js", "Tailwind CSS", "PHP", "MySQL"],
+              link: "https://jobpilot-ai-automation.netlify.app/"
+            },
+            {
               img: "assets/zomato.png",
               title: "Zomato Web",
               desc: "A responsive food ordering platform inspired by Zomato, offering dynamic menus, dish selection, real-time order processing, and integrated payment options for a seamless user experience.",
@@ -64,20 +79,24 @@ tags: ["React", "Tailwind CSS", "PHP", "Laravel", "MySQL"],
               desc: "Developed a multi-service super-app that integrates real-time food ordering, job listings, and business services into a single platform Built a highly responsive marketplace UI with Firebase authentication for secure user access and seamless  data synchronization across devices",
               tags: ["React Native", "Expo", "Tailwind CSS"],
               link: "https://smartserve-app.netlify.app/"
-            },
-            {
-              img: "assets/resturant-management.png",
-              title: "Restaurant Management",
-              desc: "A React-based Restaurant Management Dashboard with user, order, and restaurant controls, charts, and responsive UI.",
-              tags: ["React", "Tailwand CSS"],
-              link: "https://restaurant-management-upadte.netlify.app/"
-            },
-            
-            
+            }
           ].map((project, idx) => (
             <div className="projectsection-card" key={idx}>
               <div className="projectsection-image">
-                <img src={project.img} alt={project.title} />
+                {project.video ? (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={project.img}
+                    aria-label={`${project.title} preview`}
+                  >
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img src={project.img} alt={project.title} />
+                )}
                 <div className="projectsection-overlay">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
                 </div>

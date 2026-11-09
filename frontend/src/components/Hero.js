@@ -5,7 +5,7 @@ const Hero = () => {
   const [showIframe] = useState(false);
 
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       {/* <div className="floating-icons">
         {[1, 2, 3, 4, 5].map((_, idx) => (
           <svg key={idx} className={`floating-icon icon-${idx + 1}`} width="80" height="80">
@@ -49,7 +49,7 @@ const Hero = () => {
 
         <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
           <a
-            href="/assets/Ankit_Updated_Resume.pdf"
+            href="/assets/Ankit_Malviya_Resume.pdf"
             download="Ankit Resume.pdf"
             style={{ textDecoration: 'none' }}
           >
